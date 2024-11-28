@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roteiros em Cena Podcast</title>
+    <style>
+        /* Estilo para o corpo */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            color: #ffffff;
+            text-align: center;
+            background: url('https://ia600701.us.archive.org/7/items/dall.-e-2024-11-18-17.40/DALL%C2%B7E-2024-11-18-17.40.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 50px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 8% auto;
+            max-width: 900px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 20px 0;
+            color: #1DB954;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+        }
+
+        p {
+            font-size: 1.6rem;
+            color: #e1e1e1;
+            margin-bottom: 40px;
+            line-height: 1.8;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .highlight {
+            font-size: 1.4rem;
+            color: #ffffff;
+            margin: 30px 0;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 15px 40px;
+            background: #1DB954;
+            color: #121212;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: 0.3s;
+            font-family: 'Roboto', sans-serif;
+            display: inline-block;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        a:hover {
+            background: #1ed760;
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(30, 215, 96, 0.6);
+        }
+
+        /* Estilo do player de áudio */
+        .audio-player {
+            margin-top: 20px;
+            display: none; /* Oculto inicialmente */
+        }
+
+        audio {
+            width: 100%;
+            max-width: 800px; /* Largura maior para telas grandes */
+            border-radius: 10px;
+            margin-top: 20px;
+            height: 60px; /* Altura maior para destacar o player */
+        }
+
+        /* Estilo da imagem */
+        .audio-image {
+            width: 200px; /* Largura da imagem */
+            height: 200px; /* Altura da imagem */
+            object-fit: cover; /* Garantir que a imagem preencha o quadrado */
+            border-radius: 10px;
+            display: none; /* Oculto inicialmente */
+            margin: 0 auto 15px; /* Centraliza horizontalmente e adiciona margem inferior */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Roteiros em Cena Podcast</h1>
+        <p>Embarque nessa viagem comigo e se divirta! E não se esqueça, coloque seu fone de ouvido para uma maior experiência.</p>
+        <p class="highlight">Ouça agora o podcast sobre o filme: <br> <strong>Os Trapalhões e o Mágico de Oróz</strong></p>
+        <a id="play-button">Ouça Agora</a>
+
+        <!-- Imagem do podcast -->
+        <img src="" alt="Capa do Podcast" class="audio-image" id="audio-image">
+
+        <!-- Player de áudio -->
+        <div class="audio-player" id="audio-player">
+            <audio controls>
+                <source src="https://ia601202.us.archive.org/25/items/pod-cast-roteiros-em-cena/PodCast_Roteiros_Em_Cena.WAV" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </div>
+    </div>
+
+    <script>
+        // Script para exibir o player de áudio e a imagem ao clicar no botão
+        document.getElementById('play-button').addEventListener('click', function() {
+            const audioPlayer = document.getElementById('audio-player');
+            const audioImage = document.getElementById('audio-image');
+
+            // Exibir o player e a imagem
+            audioPlayer.style.display = 'block';
+            audioImage.style.display = 'block';
+
+            // Adicionar o link da imagem que será exibida
+            audioImage.src = "https://ia903204.us.archive.org/6/items/imgplayer_202411/IMGPLAYER.png";
+
+            // Ocultar o botão "Ouça Agora"
+            this.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
